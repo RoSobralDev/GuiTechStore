@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuitechStore — iPhone & Celular</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <header class="navbar">
+      <a href="#" class="nav-logo">
+            <img src="imagem/LogoGuiTech.png" alt="Logo Guitech" class="logo-icon">
+            <div class="logo-text-group">
+                <span class="logo-name">Guitech</span>
+                <span class="logo-sub">Store</span>
+            </div>
+        </a>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#catalogo">Produtos</a></li>
+                <li><a href="#">Assistência</a></li>
+                <li><a href="https://www.instagram.com/guitechstore_/" target="_blank">Instagram</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <a href="https://wa.me/5516988153981" class="nav-cta" target="_blank" rel="noopener noreferrer">
+            <span class="icon">💬</span> WhatsApp
+        </a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-badge">
+                <span class="icon">📍</span> Ribeirão Preto — SP
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="accent">iphone</span> <span class="line-light">& Celular</span><br>
+                <span class="line-light">com quem </span><span class="line-color">entende</span>
+            </h1>
+            
+            <p class="hero-sub">
+                "Não é sobre vender, é sobre realizar." — iPhones novos e seminovos, assistência técnica especializada e acessórios premium.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat"><div class="stat-num">3.4K+</div><div class="stat-label">Seguidores no Insta</div></div>
+                <div class="stat"><div class="stat-num">100%</div><div class="stat-label">iPhones com garantia</div></div>
+                <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Assistência Especializada</div></div>
+                <div class="stat"><div class="stat-num">🚚</div><div class="stat-label">Frete para todo Brasil</div></div>
+            </div>
+        <section class="catalog" id="catalogo">
+            <div class="catalog-header">
+                <h2 class="catalog-title">
+                    Produtos
+                    <span class="count-pill" id="count-label">Carregando...</span>
+                </h2>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="apple">Apple</button>
+                    <button class="filter-btn" data-filter="android">Android</button>
+                    <button class="filter-btn" data-filter="acessorios">Acessórios</button>
+                    <button class="filter-btn" data-filter="gamer">Gamer</button>
+                    <button class="filter-btn" data-filter="diversos">Diversos</button>
+                </div>
+                <div class="search-wrap">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Buscar produto..." aria-label="Buscar produto">
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-grid"></div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <dialog class="modal" id="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
+            <div class="modal-img-wrap">
+                <img class="modal-img" id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <span class="badge modal-badge" id="modal-badge"></span>
+                <div class="modal-brand" id="modal-brand"></div>
+                <h3 class="modal-name" id="modal-name"></h3>
+                <div class="modal-price" id="modal-price"></div>
+                <p class="modal-desc" id="modal-desc"></p>
+                <div class="modal-specs" id="modal-specs"></div>
+                <div class="modal-actions">
+                    <button class="btn-wa" id="modal-wa-btn">💬 Comprar via WhatsApp</button>
+                </div>
+            </div>
+        </dialog>
+    </div>
+
+    <footer>
+        <div>© 2026 <strong>GuitechStore</strong> — Ribeirão Preto, SP</div>
+        <div>Feito com 💜 para quem entende de iPhone</div>
+        <div><a href="https://www.instagram.com/guitechstore_/" target="_blank" rel="noopener noreferrer">@guitechstore_</a></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
